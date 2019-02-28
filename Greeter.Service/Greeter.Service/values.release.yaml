@@ -1,0 +1,20 @@
+replicaCount: __ReplicaCount__
+image:
+  repository: __ImageName__
+  tag: __Build.BuildNumber__
+
+ingress:
+  hosts:
+    - __IngressHostName__
+  tls:
+    - secretName: __TlsSecretName__
+      hosts:
+        - __IngressHostName__
+
+secrets: {}
+
+imagePullSecrets:
+  - name: __ImagePullSecret__
+
+envvariables:
+  servicesettings__message: __ServiceMessage__
